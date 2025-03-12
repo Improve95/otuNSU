@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=2560,1080
 MCAPVersion=11.2.0.3
 Key ID=Demo
-NLCnt=30
+NLCnt=26
 TXCnt=8
 
 [shapedef]
@@ -85,20 +85,10 @@ Root="Plus.root",5,-10,0
 Root="Minus.root",25,27,0
 
 [shapedef]
-Name=Sum3
-Line=0,0,0,0
-Line=0,16,24,16
-Line=0,32,24,32
-Rectangle=24,-8,88,40
-FColor=None
-Line=40,0,56,16
-Line=88,16,112,16
-Line=64,0,64,4
-Line=64,32,64,28
-Line=56,16,40,32
-Line=40,32,64,32
-Line=64,0,40,0
-Line=0,0,24,0
+Name=Sum
+Root="Circle.root",0,0,0
+Line=27,0,37,0
+Line=32,-5,32,5
 
 [shapedef]
 Name=Vsource.root
@@ -171,19 +161,6 @@ Pin="PinA",a,0,0,-12,-3
 Pin="PinB",a,9,0,-12,-3
 
 [compdef]
-Name=Sum3
-Definition=Macro
-Shape=Sum3
-Mask=4096
-memo=3-Input Summer Macro
-Label Offset=25,41,12,44
-PinCnt=4
-Pin="PinA",a,0,0,-3,-1
-Pin="PinB",a,0,2,-4,0
-Pin="PinC",a,0,4,-4,0
-Pin="PinD",a,14,2,-7,-2
-
-[compdef]
 Name=Abs
 Definition=Macro
 Shape=Absolute
@@ -195,8 +172,21 @@ PinCnt=2
 Pin="PinA",a,0,0,-11,-3
 Pin="PinB",a,10,0,-6,-3
 
+[compdef]
+Name=Sum
+Definition=Macro
+Shape=Sum
+Mask=4096
+Used=6
+memo=2-Input Summer Macro
+Label Offset=45,5,15,21
+PinCnt=3
+Pin="PinA",a,0,0,-9,-3
+Pin="PinB",a,4,4,8,4
+Pin="PinC",a,8,0,-7,-3
+
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 78,78,1227,517
+Window Placement=2,3, -1,-1, -8,-31, 3,78,1152,517
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -223,12 +213,12 @@ Show Grid Text=True
 [Comp]
 Name=Voltage Source
 ShowPinMarkers=True
-Px=296,272
+Px=40,264
 Rot=3
 
 [Attr]
 ON=-31,-27,PART
-V=V4
+V=V8
 Style=8192
 
 [Attr]
@@ -247,7 +237,7 @@ Style=256
 
 [Comp]
 Name=Ground
-Px=296,272
+Px=40,264
 Rot=7
 
 [Comp]
@@ -255,7 +245,7 @@ Name=F
 Style=ShowPinText
 ShowPinMarkers=True
 ShowPackagePins=True
-Px=928,200
+Px=480,192
 
 [Attr]
 ON=22,-14,PART
@@ -276,15 +266,15 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=296,200,296,224
+Pxs=40,192,40,216
 
 [Wire]
-Pxs=296,200,392,200
+Pxs=40,192,56,192
 
 [Comp]
 Name=Sub
 ShowPinMarkers=True
-Px=392,200
+Px=56,192
 
 [Attr]
 ON=44,5,PART
@@ -309,12 +299,12 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=424,344,1088,344
+Pxs=88,296,640,296
 
 [Comp]
 Name=Amp
 ShowPinMarkers=True
-Px=840,200
+Px=408,192
 
 [Attr]
 ON=54,3,PART
@@ -335,14 +325,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=456,200,472,200
+Pxs=120,192,136,192
 
 [Comp]
 Name=F
 Style=ShowPinText
 ShowPinMarkers=True
 ShowPackagePins=True
-Px=520,296
+Px=200,240
 
 [Attr]
 ON=22,-14,PART
@@ -363,102 +353,27 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=504,200,504,296
+Pxs=168,192,168,240
 
 [Wire]
-Pxs=504,296,520,296
+Pxs=168,240,200,240
 
 [Wire]
-Pxs=504,200,712,200
+Pxs=168,192,336,192
 
 [Wire]
-Pxs=680,296,712,296
+Pxs=88,224,88,296
 
 [Wire]
-Pxs=424,232,424,344
-
-[Comp]
-Name=F
-Style=ShowPinText
-ShowPinMarkers=True
-ShowPackagePins=True
-Px=520,96
-
-[Attr]
-ON=22,-14,PART
-V=X21
-Style=8192
-
-[Attr]
-ON=22,0,FILE
-V=F
-
-[Attr]
-ON=22,28,Param:FS
-V=Td*S/(1 + Tc*S)
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Sum3
-Px=712,184
-
-[Attr]
-ON=25,41,PART
-V=X22
-Style=8192
-
-[Attr]
-ON=25,55,FILE
-V=Sum3
-
-[Attr]
-ON=25,83,Param:KA
-V=1
-
-[Attr]
-ON=25,97,Param:KB
-V=1
-
-[Attr]
-ON=25,111,Param:KC
-V=1
-
-[Attr]
-ON=25,125,PACKAGE
-V=TO-263
+Pxs=392,192,400,192
 
 [Wire]
-Pxs=504,96,504,200
-
-[Wire]
-Pxs=504,96,520,96
-
-[Wire]
-Pxs=712,216,712,296
-
-[Wire]
-Pxs=680,96,712,96
-
-[Wire]
-Pxs=712,96,712,184
-
-[Wire]
-Pxs=824,200,840,200
-
-[Wire]
-Pxs=1088,200,1088,344
-
-[Wire]
-Pxs=912,200,928,200
+Pxs=640,192,640,296
 
 [Comp]
 Name=Abs
 Style=ShowPinText
-Px=528,416
+Px=152,336
 
 [Attr]
 ON=20,25,PART
@@ -476,7 +391,7 @@ V
 [Comp]
 Name=F
 Style=ShowPinText
-Px=608,416
+Px=248,336
 
 [Attr]
 ON=22,-14,PART
@@ -497,17 +412,55 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=472,416,528,416
+Pxs=136,336,152,336
 
 [Wire]
-Pxs=472,200,472,416
+Pxs=136,192,136,336
 
 [Wire]
-Pxs=472,200,504,200
+Pxs=136,192,168,192
+
+[Comp]
+Name=Sum
+Px=336,192
+
+[Attr]
+ON=45,5,PART
+V=X33
+Style=8192
+
+[Attr]
+ON=45,19,FILE
+V=Sum
+
+[Attr]
+ON=45,47,Param:KA
+V=1
+Style=8192
+
+[Attr]
+ON=45,61,Param:KB
+V=1
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=400,192,408,192
+
+[Wire]
+Pxs=360,240,368,240
+
+[Wire]
+Pxs=368,224,368,240
+
+[Wire]
+Pxs=232,336,248,336
 
 [Grid Text]
 Text=".define To 1.04"
-Px=296,136
+Px=16,136
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -515,7 +468,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define n 5"
-Px=296,120
+Px=16,120
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -523,7 +476,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define Tcr 13.3"
-Px=296,168
+Px=16,168
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -531,7 +484,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define Kcr 1.2"
-Px=296,152
+Px=16,152
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -539,7 +492,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define Tc Td/8"
-Px=296,96
+Px=16,96
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -547,7 +500,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define Td Ti/4"
-Px=296,80
+Px=16,80
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -555,7 +508,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define Ti Tcr/2"
-Px=296,64
+Px=16,64
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -563,7 +516,7 @@ CBorder=None
 
 [Grid Text]
 Text=".define K 0.6*Kcr"
-Px=296,48
+Px=16,48
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -701,7 +654,7 @@ ALIGNBOTTOM=No
 
 [Section]
 Index=0
-Name="mylab1"
+Name="lab1pi"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -723,9 +676,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=173,0
+SB 3=0,27
 Scale 3=0.66666666666666663
-Px=904,411
+Px=371,444
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
