@@ -1,0 +1,149 @@
+********************************************************************************
+***                       Micro-Cap 11.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                          AC Analysis of lab3pid                          ***
+***                            15.05.2025 0:00:39                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E2,1E-2
+Number of Points         1000
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   2             0.000   3             0.000  
+5             0.000   6             0.000   7             0.000  
+8             0.000   9             0.000   10            0.000  
+11            0.000   13            0.000   14            0.000  
+15            0.000   16            0.000   17            0.000  
+18            0.000   19            0.000   21            0.000  
+22            0.000   23            0.000   24            0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:             V4.RS         V5.RS         V6.RS        X34.R1        X34.R2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:            X34.R3        X40.R1        X40.R2        X40.R3        X46.R1
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:            X46.R2        X46.R3
+V                    0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000 
+tc2                  0.000         0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V4            V5            V6
+Using model:        GENERAL       GENERAL       GENERAL
+V                    0.000         0.000         0.000 
+Power DC Terms:
+PG                   0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource              0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:           X31.E1        X37.E1        X43.E1
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X30.E1        X34.E2        X36.E1        X40.E2        X42.E1
+V                   0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:           X46.E2
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Laplace Source
+==================================================
+Instance:           X29.E2        X32.E2        X33.E2        X35.E2        X38.E2
+V                   0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:           X39.E2        X41.E2        X44.E2        X45.E2
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
