@@ -36,9 +36,9 @@ Ad12 = sysd2.A;
 Bd12 = sysd2.B;
 Cd12 = sysd2.C;
 //3
-h0 = read("pi0.txt", 1, 101);
-h1 = read("pi1.txt", 1, 1001);
-h2 = read("pi2.txt", 1, 10001);
+h0 = read("100.txt", 1, 101);
+h1 = read("1000.txt", 1, 1001);
+h2 = read("10000.txt", 1, 10001);
 
 //4
 function result = calculate_h(Ad, Bd, Cd, count)
@@ -51,7 +51,7 @@ function result = calculate_h(Ad, Bd, Cd, count)
     result = h;
 endfunction;
 h10 = calculate_h(Ad10, Bd10, Cd10, 101);
-plot(0:100, h10);
+//plot(0:100, h10);
 h11 = calculate_h(Ad11, Bd11, Cd11, 1001);
 //plot(0:1000, h11);
 h12 = calculate_h(Ad12, Bd12, Cd12, 10001);
